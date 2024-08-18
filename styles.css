@@ -30,26 +30,20 @@ html {
     color: white;
   }
 
-  #image {
-    justify-content: center;
-    max-width: 75%;
+  .mid-nav #image {
+    justify-content: left;
     height: auto;
     display: block;
-    margin: 0 auto;
+    max-width: 5%;
+    max-height: 5%;
   }
 
-  #img-div {
-    background: white;
-    padding: 10px;
-    margin: 0;
-  }
-
-  h1 {
+  .mid-nav h1 {
     font-size: 3rem;
     text-align: center;
   }
 
-  p {
+  .mid-nav p {
     font-size: 2rem;
     text-align: center;
   }
@@ -107,3 +101,74 @@ html {
       max-width: 100%;
     }
   }
+
+  .mid {
+    text-align: center;
+    font-size: 1.8rem;
+  }
+
+ /* Flexbox container to align cards horizontally */
+.card-container {
+    display: flex;
+    justify-content: space-between; /* Distribute the cards evenly */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    gap: 20px; /* Space between the cards */
+    padding: 20px;
+  }
+  
+  .card {
+    width: calc(20% - 16px); /* 5 cards in a row, accounting for gap */
+    height: 200px;
+    perspective: 1000px;
+    text-align: center;
+  }
+  
+  .card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.999s;
+  }
+  
+  .card:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  .card-front {
+    background-color: #6A2C70;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 10px solid #6A2C70;
+    border-radius: 10px;
+    transform: rotateY(0deg);
+  }
+  
+  .card-back {
+    background-color: #F08A5D;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 10px solid #F08A5D;
+    border-radius: 10px;
+    font-size: 24px;
+    transform: rotateY(180deg);
+  }
+  
+  .card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
