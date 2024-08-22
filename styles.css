@@ -172,3 +172,73 @@ html {
     border-radius: 10px;
   }
   
+  .mid-sec {
+    text-align: center;
+    padding: 20px;
+}
+
+.mid-sec button {
+  border-radius: 8px;
+  background-color: #04AA6D;
+  padding: 10px;
+}
+
+.horizontal-list {
+    display: grid;
+    grid-template-columns: repeat(3, 150px); /* 3 equal columns */
+    gap: 20px; /* Adjust this value for smaller gaps */
+    padding: 0; /* Remove default padding */
+    list-style-type: none; /* Remove bullet points */
+    justify-content: center;
+}
+
+.horizontal-list li {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center content inside the li */
+  width: 100px;
+}
+
+.item {
+  text-align: center; /* Center text inside each item */
+  background-color: #f08a5d;
+  border-radius: 5px;
+  padding: 10px;
+  width: 150px; /* Adjust to desired width */
+}
+
+.item p {
+  margin-top: 10px; /* Space between li text and paragraph */
+  font-size: 1.4rem; /* Adjust font size */
+  color: #333; /* Text color */
+}
+
+.item li {
+  font-size: 2rem;
+}
+
+.booking {
+  display: inline-block; /* Keeps the background tight around the text */
+  background-color: #f08a5d; /* Background color for the text block */
+  padding: 10px; /* Adds space around the text */
+  border-radius: 5px; /* Optional: Rounds the corners */
+}
+
+.booking-button-link {
+  display: block; /* Ensures the link behaves like a block element */
+  margin-top: 10px; /* Adds space between the .booking div and the button */
+}
+
+.booking-button {
+  padding: 10px 20px; /* Adjusts button padding for better appearance */
+  background-color: #6a2c70; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none; /* Removes default border */
+  border-radius: 5px; /* Rounds the corners of the button */
+  cursor: pointer; /* Changes cursor to pointer on hover */
+  font-size: 16px; /* Adjusts button text size */
+}
+
+.booking-button:hover {
+  background-color: #5b2560; /* Darker shade on hover */
+}
